@@ -33,7 +33,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-  
+
 }
 
 .logo-booki {
@@ -45,16 +45,17 @@ body {
 nav {
     position: relative;
     align-items: center;
-    
+
 }
 
 a:hover {
-    color: #007bff; /* Change to blue when hovered */
+    color: var(--main-color);
+    /* Change to blue when hovered */
 }
 
-.hebergements-nav{
-    color: #007bff;
-    
+.hebergements-nav {
+    color: var(--main-color);
+
 }
 
 
@@ -66,11 +67,11 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: black;
+    color: var(--black);
     position: relative;
     display: block;
     padding: 1px 9px;
-   
+
 }
 
 header a:hover::before {
@@ -79,133 +80,151 @@ header a:hover::before {
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 85%; /* Adjust the width of the blue bar */
-    height: 4px; /* Adjust the height of the blue bar */
-    background-color: #007bff;
+    width: 85%;
+    /* Adjust the width of the blue bar */
+    height: 4px;
+    /* Adjust the height of the blue bar */
+    background-color: var(--main-color)
+}
+
+/********  Search bar and filter     *********/
+
+.search-bar {
+    display: flex;
+    width: 418px;
+    height: 49;
+}
+
+.search-bar {
+    background-color: var(--white);
+    border: 1px solid var(--main-bg-color);
+    border-radius: 15px;
+    position: relative;
+
+}
+
+.search-bar,
+.filter,
+.info {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border: 1px var(--main-bg-color);
+
+}
+
+.search-input {
+    padding: 11px 77px;
+    font-size: 16px;
+    background-color: var(--white);
+}
+
+.location-icon {
+    border: 1px var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--main-bg-color);
+    border-radius: 15px 0px 0px 15px;
+    height: 55px;
+    width: 54px;
+}
+
+.search-button {
+    background-color: var(--main-color);
+    color: var(--filter-bg-color);
+    border: 1px solid var(--main-color);
+    padding: 17px 16px;
+    font-size: 16px;
+    align-items: center;
+    border-radius: 0px 15px 15px 0px;
 }
 
 
 
-
-/********  Search bar and filter     *********/
-
-
-
-
-.search-bar {
-    
-   
-    display: flex;
-    width: 418px;
-  }
-
-.search-bar, .filter, .info {
-    display: flex;
-    align-items: center;
-    padding-bottom: 5px;
-  }
-
- 
-  .search-form {
-    display: flex;
-    align-items: center;
-    border:none;
-    
-  }
-  
-  
-  .search-input {
-    border: #ccc;
-    padding: 8px 12px;
-    font-size: 16px;
-    width: 200px;
-    
-  }
-  /* location-icon */
-  .location-icon {
-    width: 35px;
-    height: 39px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  
-  .search-button {
-    background-color: #0065FC;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; 
-    font-size: 16px;
-    
-  }
-  
- 
-  
-  .filter-btn, .info {
-    margin: 5px; 
+.filter-btn,
+.info {
+    margin: 5px;
     gap: 10px;
-   }
-  
+}
 
 
-  .filter {
+
+.filter {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 35px;
     gap: 32px;
-    
-  }
 
-  
-  .filter-btns {
+}
+
+
+.filter-btns {
     display: flex;
     align-items: center;
     gap: 40px;
     width: 100%;
-  }
-  
-  
-  .filter-btn {
+}
+
+
+.filter-btn {
+    display: flex;
     justify-content: center;
     align-items: center;
-    font:  700 17px "Raleway", sans-serif;
+    font: 700 17px "Raleway", sans-serif;
     border-radius: 25px;
     height: 45px;
     padding: 4px 20px;
-    background-color: var(--light-blue);
- 
-  }
+    background-color: var(--white);
+    border: 1px solid var(--main-bg-color);
 
-    
-  .filter i {
-   
+
+}
+
+
+.filter i {
+
     font-size: 22px;
     margin-right: 10px;
-  }
-  
-  .filter-btn:hover {
-    border: 2px var(--grey);
-    background-color: lightblue ;
-    
-  }
- 
-  .input-search input::placeholder {
-    align-self: center;
-  }
+}
 
-  .search-form input {
-    font:  700 18px "Raleway", sans-serif;
+.filter-btn:hover {
+    background-color: var(--main-bg-color);
+}
+
+
+
+.input-search input::placeholder {
+    align-self: center;
+}
+
+.search-form input {
+    font: 700 18px "Raleway", sans-serif;
     border: none;
     outline: none;
     width: 60%;
     border: none;
     padding-left: 17px;
-  }
+}
+
+.fa-solid {
+    border-radius: 12px;
+    height: 24px;
+    width: 24px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: contents;
+}
 
 
 
@@ -214,35 +233,31 @@ header a:hover::before {
 .offers {
     margin: 0 50px 60px 50px;
     display: flex;
-  }
-  
-  .offers h2 {
-    font:  700 22px "Raleway", sans-serif;
-  }
-  
-  /*----------  Hébergements à Marseille  ----------*/
-  
-  .offers__main {
-   
+}
+
+.offers h2 {
+    font: 700 22px "Raleway", sans-serif;
+}
+
+/*----------  Hébergements à Marseille  ----------*/
+
+.offers__main {
+
     padding: 34px 44px 46px 36px;
     width: 90%;
     height: auto;
     display: block;
-  }
-  
-  .offers__main h2 {
+}
+
+.offers__main h2 {
     margin-bottom: 23px;
-  }
-  
-  .card__main {
-    width: calc(100% / 3); 
+}
+
+.card__main {
+    width: calc(100% / 3);
     border: 5px solid #ffffff;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-   
-    
-   
 
-   
     padding-bottom: 0px;
     flex-direction: column;
     align-items: center;
@@ -253,173 +268,170 @@ header a:hover::before {
     background: #FFF;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
 
-    
 
-   
-  }
-  
-  .card__main a {
+
+
+}
+
+.card__main a {
     color: var(--black);
     text-decoration: none;
     cursor: pointer;
 
 
-    
-  }
-  
-  .card__main img {
+
+}
+
+.card__main img {
     width: 100%;
     border-radius: 20px 20px 0px 0px;
     height: 124px;
     object-fit: cover;
 
+}
 
-    
-    
+.card__main h3 {
+    font: 700 16px "Raleway", sans-serif;
+}
 
-    
-    
-    
-  }
-  .card__main h3 {
-    font:  700 16px "Raleway", sans-serif;
-  }
-  .card__main p {
-    font:  400 14px "Raleway", sans-serif;
-  }
+.card__main p {
+    font: 400 14px "Raleway", sans-serif;
+}
 
-  
-  
-  .stars__container--main i {
-    color: var(--main-blue);
+
+
+.stars__container--main i {
     margin: -2px;
     font-size: 14px;
-  }
-  
-  .card__description--main {
+    display: contents;
+}
+
+.card__description--main {
     padding: 4px 0 6px 11px;
-  }
-  
-  .card__description--main > h3,
-  .card__description--main > p {
+}
+
+.card__description--main>h3,
+.card__description--main>p {
     margin-bottom: 9px;
-  }
-  
-  .card__main:hover {
+}
+
+.card__main:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card__main:active {
-    transform: translateY(2px); /* Déplacer la carte de 2 pixels vers le bas */
-  }
-  
-  .show-more__btn {
-    font:  700 18px "Raleway", sans-serif;;
+}
+
+.card__main:active {
+    transform: translateY(2px);
+}
+
+.show-more__btn {
+    font: 700 18px "Raleway", sans-serif;
+    ;
     margin-top: 40px;
     margin-left: 4px;
     padding: 0;
     border: none;
     cursor: pointer;
-  }
-  
-  .show-more__btn:hover {
+}
+
+.show-more__btn:hover {
     color: var(--main-blue);
     background-color: white;
-  }
-  
-  .row1,
-  .row2 {
+}
+
+.row1,
+.row2 {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1.875rem;
-    
-  }
-  
-  .row1 {
-    margin-bottom: 30px;
-  }
-  
 
-  /*----------  Les plus populaires  ----------*/
-  
-  .offers__spensored {
-    width: calc(
-      (100% - 40px) / 3
-    ); /* Un tiers de l'espace total moins 40px d'espacement */
+}
+
+.row1 {
+    margin-bottom: 30px;
+}
+
+
+/*----------  Les plus populaires  ----------*/
+
+.offers__spensored {
+    width: calc((100% - 40px) / 3);
+    /* Un tiers de l'espace total moins 40px d'espacement */
     margin-left: 40px;
     padding: 41px 40px 1px 37px;
-  }
-  
-  .card__spensored--container{
+}
+
+.card__spensored--container {
     display: flex;
     flex-direction: column;
-  }
-  .offers__spensored h2 {
+}
+
+.offers__spensored h2 {
     margin-bottom: 26px;
-  }
-  
-  .offers__spensored-title {
+}
+
+.offers__spensored-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-  }
-  
-  .offers__spensored-title i {
+}
+
+.offers__spensored-title i {
     color: var(--main-blue);
     font-size: 18px;
-  }
-  
-  .card__spensored {
+}
+
+.card__spensored {
     border-radius: 20px;
     border: 5px solid #ffffff;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card__spensored:hover {
+}
+
+.card__spensored:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card__spensored:active {
-    transform: translateY(2px); /* Déplacer la carte de 2 pixels vers le bas */
-  }
-  
-  .card__spensored a {
+}
+
+.card__spensored:active {
+    transform: translateY(2px);
+    /* Déplacer la carte de 2 pixels vers le bas */
+}
+
+.card__spensored a {
     text-decoration: none;
     display: flex;
     flex-direction: row;
-  }
-  
-  .card__spensored img {
+}
+
+.card__spensored img {
     height: 144px;
     width: 36%;
     border-radius: 20px 0px 0px 20px;
     object-fit: cover;
-  }
-  
-  .card__description--spensored {
+}
+
+.card__description--spensored {
     padding: 16px 22px 10px 15px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     color: var(--black);
-  }
-  
-  .card__spensored:nth-child(n + 1) {
+}
+
+.card__spensored:nth-child(n + 1) {
     margin-bottom: 33px;
-  }
-  
-  .card__description--spensored h3 {
-    font:  700 16px "Raleway", sans-serif;
+}
+
+.card__description--spensored h3 {
+    font: 700 16px "Raleway", sans-serif;
     margin-bottom: 7px;
-  }
-  
-  .card__description--spensored p {
-    font:  400 14px "Raleway", sans-serif;
-  }
-  
+}
+
+.card__description--spensored p {
+    font: 400 14px "Raleway", sans-serif;
+}
+
 
 
 
@@ -441,7 +453,7 @@ header a:hover::before {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -460,7 +472,8 @@ header a:hover::before {
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
+
 }
 
 /****** Hebergements And Populaires ***********/
@@ -530,96 +543,97 @@ header a:hover::before {
 /***********Activities *************/
 .activities {
     margin: 60px 53px 61px 50px;
-  }
-  
-  .activities h2 {
-    font:  700 22px "Raleway", sans-serif;
+}
+
+.activities h2 {
+    font: 700 22px "Raleway", sans-serif;
     margin-bottom: 18.47px;
-  }
-  
-  .card__activity {
+}
+
+.card__activity {
     width: 25%;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card__activity:hover {
+}
+
+.card__activity:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
-    transform: translateY(2px); /* Déplacer la carte de 2 pixels vers le bas */
-  }
-  
-  .card__activity a {
+    transform: translateY(2px);
+    /* Déplacer la carte de 2 pixels vers le bas */
+}
+
+.card__activity a {
     text-decoration: none;
     color: var(--black);
-  }
-  
-  .activities img {
+}
+
+.activities img {
     width: 100%;
     height: 389px;
     border-radius: 20px 20px 0px 0px;
-  }
-  
-  .card__description--activity h3 {
-    font:  700 16px "Raleway", sans-serif;
+}
+
+.card__description--activity h3 {
+    font: 700 16px "Raleway", sans-serif;
     padding: 20px 36px 21px 19px;
-  }
-  
-  .activities-row {
+}
+
+.activities-row {
     display: flex;
     flex-direction: row;
-  }
-  
-  .card__activity:nth-child(-n + 3) {
+}
+
+.card__activity:nth-child(-n + 3) {
     margin-right: 43px;
-  }
+}
 
 /************Footer******************/
 
-  footer {
-      display: flex;
-      padding: 45px 0px 24px 118px;
-      margin-bottom: 27px;
-      background-color: var(--main-bg-color);
-      position: relative;
-  }
+footer {
+    display: flex;
+    padding: 45px 0px 24px 118px;
+    margin-bottom: 27px;
+    background-color: var(--main-bg-color);
+    position: relative;
+}
 
-  footer ul {
-      list-style: none;
+footer ul {
+    list-style: none;
 
-  }
+}
 
-  .footer-ul,
-  .footer-ul li {
-      margin: 0;
-      padding: 0;
-  }
+.footer-ul,
+.footer-ul li {
+    margin: 0;
+    padding: 0;
+}
 
-  .footer-column {
-      display: inline-block;
-      vertical-align: top;
-      width: 33.33%; 
-      padding: 0 20px;
-      box-sizing: border-box;
-  }
+.footer-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
-  .footer-column h3 {
-      color: #333;
-      margin-bottom: 10px;
-  }
+.footer-column h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
 
-  .footer-ul li {
-      margin-bottom: 5px;
-  }
+.footer-ul li {
+    margin-bottom: 5px;
+}
 
-  .footer-ul li a {
-      color: #666;
-      text-decoration: none;
-  }
+.footer-ul li a {
+    color: #666;
+    text-decoration: none;
+}
 
-  .footer-ul li a:hover {
-      color: #007bff;
-  }
+.footer-ul li a:hover {
+    color: #007bff;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -663,19 +677,20 @@ header a:hover::before {
     .search-bar {
         flex-direction: column;
         align-items: flex-start;
-      }
-      
-      .location-icon {
+    }
+
+    .location-icon {
         margin-right: 0;
         margin-bottom: 10px;
-        border-radius: 20px; /* Add full border-radius in mobile view */
-      }
-    
-      .design-component-instance-node {
+        border-radius: 20px;
+        /* Add full border-radius in mobile view */
+    }
+
+    .design-component-instance-node {
         width: 100%;
-      }
-    
-      .search-input {
+    }
+
+    .search-input {
         width: 100%;
-      }
+    }
 }
