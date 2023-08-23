@@ -7,6 +7,17 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --white: #ffffff;
+    --black: #000000;
+    --box-shadows1: rgba(0, 0, 0, 0.1);
+    --box-shadows2: rgba(0, 0, 0, 0.2);
+    --box-shadows3: rgba(0, 0, 0, 0.3);
+    --box-shadows10: rgba(0, 0, 0, 0.10);
+    --footer-h3: #333;
+    --footer-li: #666;
+    --footer-li-hover: #007bff;
+    --card-background: #FFF;
+    --info-icon: #D9D9D9;
 }
 
 .fa-solid {
@@ -16,6 +27,11 @@
 body {
     display: flex;
     justify-content: center;
+    padding: 0rem 3.125rem;
+    gap: 2.1875rem;
+    align-self: stretch;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -48,16 +64,9 @@ nav {
 
 }
 
-a:hover {
-    color: var(--main-color);
-    /* Change to blue when hovered */
-}
-
 .hebergements-nav {
     color: var(--main-color);
-
 }
-
 
 nav ul {
     list-style: none;
@@ -71,23 +80,36 @@ nav ul li a {
     position: relative;
     display: block;
     padding: 1px 9px;
-
 }
 
+.active::before,
 header a:hover::before {
     content: '';
     position: absolute;
-    top: -30px;
+    top: -42px;
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
-    /* Adjust the width of the blue bar */
-    height: 4px;
-    /* Adjust the height of the blue bar */
+    height: 7px;
     background-color: var(--main-color)
 }
 
 /********  Search bar and filter     *********/
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.1875rem;
+    align-self: stretch;
+}
+
+.headline_text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    align-self: stretch;
+}
 
 .search-bar {
     display: flex;
@@ -161,8 +183,10 @@ header a:hover::before {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 35px;
-    gap: 32px;
+
+    height: 3.125rem;
+    align-items: center;
+    gap: 0.9375rem;
 
 }
 
@@ -170,7 +194,7 @@ header a:hover::before {
 .filter-btns {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 0.9375rem;
     width: 100%;
 }
 
@@ -179,19 +203,17 @@ header a:hover::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    font: 700 17px "Raleway", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
     border-radius: 25px;
     height: 45px;
     padding: 4px 20px;
     background-color: var(--white);
     border: 1px solid var(--main-bg-color);
-
-
 }
 
 
 .filter i {
-
     font-size: 22px;
     margin-right: 10px;
 }
@@ -207,7 +229,8 @@ header a:hover::before {
 }
 
 .search-form input {
-    font: 700 18px "Raleway", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
     border: none;
     outline: none;
     width: 60%;
@@ -227,6 +250,17 @@ header a:hover::before {
 }
 
 
+#info-icon {
+    border-radius: 12px;
+    background-color: var(--card-background);
+    width: 1.5rem;
+    height: 1.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--info-icon);
+
+}
 
 /**********************       main      **********************************/
 
@@ -236,15 +270,14 @@ header a:hover::before {
 }
 
 .offers h2 {
-    font: 700 22px "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 /*----------  Hébergements à Marseille  ----------*/
 
 .offers__main {
 
-    padding: 34px 44px 46px 36px;
-    width: 90%;
     height: auto;
     display: block;
 }
@@ -255,21 +288,17 @@ header a:hover::before {
 
 .card__main {
     width: calc(100% / 3);
-    border: 5px solid #ffffff;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--white);
 
+
+    box-shadow: 0px 3px 15px var(--box-shadows2);
     padding-bottom: 0px;
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
     flex: 1 0 0;
-
     border-radius: 1.25rem;
-    background: #FFF;
-    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.10);
-
-
-
+    background: var(--card-background);
 
 }
 
@@ -291,11 +320,13 @@ header a:hover::before {
 }
 
 .card__main h3 {
-    font: 700 16px "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .card__main p {
-    font: 400 14px "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 
@@ -316,7 +347,7 @@ header a:hover::before {
 }
 
 .card__main:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 15px var(--box-shadows3);
 }
 
 .card__main:active {
@@ -324,8 +355,8 @@ header a:hover::before {
 }
 
 .show-more__btn {
-    font: 700 18px "Raleway", sans-serif;
-    ;
+    font-size: 18px;
+    font-weight: 700;
     margin-top: 40px;
     margin-left: 4px;
     padding: 0;
@@ -384,17 +415,17 @@ header a:hover::before {
 
 .card__spensored {
     border-radius: 20px;
-    border: 5px solid #ffffff;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--white);
+    box-shadow: 0px 3px 15px var(--box-shadows2);
 }
 
 .card__spensored:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 15px var(--box-shadows3);
 }
 
 .card__spensored:active {
     transform: translateY(2px);
-    /* Déplacer la carte de 2 pixels vers le bas */
+    /* move down 2 pixels  */
 }
 
 .card__spensored a {
@@ -424,12 +455,14 @@ header a:hover::before {
 }
 
 .card__description--spensored h3 {
-    font: 700 16px "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
     margin-bottom: 7px;
 }
 
 .card__description--spensored p {
-    font: 400 14px "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 
@@ -443,9 +476,14 @@ header a:hover::before {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
     box-sizing: border-box;
+    display: flex;
+    padding: 0rem 3.125rem;
+    flex-direction: column;
+    gap: 2.1875rem;
 }
+
+
 
 .section-title {
     margin: 0;
@@ -456,7 +494,7 @@ header a:hover::before {
     background-color: var(--white);
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 3px 15px var(--box-shadows1));
 }
 
 .card img {
@@ -465,6 +503,7 @@ header a:hover::before {
 
 .card-title {
     font-size: 16px;
+
 }
 
 .euro {
@@ -485,8 +524,11 @@ header a:hover::before {
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
+
     box-sizing: border-box;
+    padding: 1.875rem;
+
+
 }
 
 /****** Hebergements ***********/
@@ -542,25 +584,36 @@ header a:hover::before {
 
 /***********Activities *************/
 .activities {
-    margin: 60px 53px 61px 50px;
+    display: flex;
+    padding: 1.875rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.875rem;
+    height: auto;
 }
 
 .activities h2 {
-    font: 700 22px "Raleway", sans-serif;
     margin-bottom: 18.47px;
+    align-self: baseline;
+    height: 1.87619rem;
+    align-self: stretch;
+    color: var(--black);
+    font-family: Raleway;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 .card__activity {
     width: 25%;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 1.25rem;
+    box-shadow: 0px 3px 15px 0px var(--box-shadows10);
 }
 
 .card__activity:hover {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
-    transform: translateY(2px);
-    /* Déplacer la carte de 2 pixels vers le bas */
+    box-shadow: 0px 3px 15px var(--box-shadows3);
+
 }
 
 .card__activity a {
@@ -569,13 +622,18 @@ header a:hover::before {
 }
 
 .activities img {
-    width: 100%;
-    height: 389px;
-    border-radius: 20px 20px 0px 0px;
+    width: 18.59375rem;
+    height: 23.75rem;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 1.25rem 1.25rem 0rem 0rem;
+    background: lightgray 50% / cover no-repeat;
+    object-fit: cover;
 }
 
 .card__description--activity h3 {
-    font: 700 16px "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
     padding: 20px 36px 21px 19px;
 }
 
@@ -585,7 +643,7 @@ header a:hover::before {
 }
 
 .card__activity:nth-child(-n + 3) {
-    margin-right: 43px;
+    margin-right: 40px;
 }
 
 /************Footer******************/
@@ -618,7 +676,8 @@ footer ul {
 }
 
 .footer-column h3 {
-    color: #333;
+
+    color: var(--footer-h3);
     margin-bottom: 10px;
 }
 
@@ -627,12 +686,12 @@ footer ul {
 }
 
 .footer-ul li a {
-    color: #666;
+    color: var(--footer-li);
     text-decoration: none;
 }
 
 .footer-ul li a:hover {
-    color: #007bff;
+    color: --footer-li-hover;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
