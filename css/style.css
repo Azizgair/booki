@@ -115,9 +115,7 @@ header a:hover::before {
     display: flex;
     width: 418px;
     height: 49;
-}
 
-.search-bar {
     background-color: var(--white);
     border: 1px solid var(--main-bg-color);
     border-radius: 15px;
@@ -183,8 +181,6 @@ header a:hover::before {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    height: 3.125rem;
     align-items: center;
     gap: 0.9375rem;
 
@@ -729,6 +725,78 @@ footer ul {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+
+    body {
+        padding: 0;
+    }
+
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.1875rem;
+        align-self: stretch;
+    }
+
+
+    .search-input {
+        padding: 11px 20px;
+        width: 100%;
+    }
+
+    .filter-btns {
+        flex-direction: row;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.25rem;
+
+    }
+
+    .card__main {
+        width: 100%;
+        margin-bottom: 1.875rem;
+    }
+
+    .activities {
+        padding: 1.875rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.875rem;
+        align-self: stretch;
+        width: 100%;
+    }
+
+
+    .activities-row {
+        /* align-items: flex-start;
+        
+        align-self: stretch;
+        width: 100%; */
+        display: flex;
+        gap: 1.875rem;
+
+    }
+
+    .card__activity {
+        /*  display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1 0 0;
+        width: 100%; */
+        flex: 0 0 auto;
+        width: auto;
+    }
+
+
+
 }
 
 /* Small devices (phones, less than 768px) */
@@ -752,4 +820,61 @@ footer ul {
     .search-input {
         width: 100%;
     }
+
+    .headline_text {
+        align-items: flex-start;
+    }
+
+    .headline {
+        gap: 1.25rem;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .filter-btns {
+        flex-direction: column;
+    }
+
+    .card__main {
+        width: 100%;
+        /*  flex-wrap: wrap; */
+    }
+
+    .hebergements {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .populaires {
+        width: 100%;
+        display: flex;
+        padding: 1.875rem 1.25rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9375rem;
+        align-self: stretch;
+        flex-wrap: wrap;
+
+    }
+
+    .populaires-cards .card {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+
+    .activities-row {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+    }
+
+    .card__activity {
+        width: 100%;
+    }
+
 }
