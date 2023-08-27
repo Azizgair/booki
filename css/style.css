@@ -801,6 +801,62 @@ footer ul {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .header {
+        display: contents;
+
+    }
+
+    .header img {
+        align-self: center;
+    }
+
+    .active::before,
+    header a:hover::before {
+
+        top: 33px;
+
+        height: 2px;
+
+    }
+
+
+
+
+
+
+    nav {
+        position: relative;
+
+
+    }
+
+    .hebergements-nav {
+        color: var(--main-color);
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: var(--black);
+        position: relative;
+        display: block;
+        padding: 1px 9px;
+    }
+
+
+
+
+
+
+
+
+
+
     .search-bar {
         flex-direction: column;
         align-items: flex-start;
