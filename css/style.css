@@ -926,9 +926,35 @@ footer ul {
 
     .card__main {
         width: 100%;
-
+        border: 0px;
 
     }
+
+    .card-hotel-port {
+        order: 1;
+    }
+
+    .card-hotel-amina {
+        order: 6;
+    }
+
+    .card-hotel-mouettes {
+        order: 3;
+    }
+
+    .card-hotel-mer {
+        order: 4;
+    }
+
+    .card-auberge-canibiere {
+        order: 2;
+    }
+
+    .card-auberge-panier {
+        order: 5;
+    }
+
+
 
     .show-more__btn {
         margin-top: 0px;
