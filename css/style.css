@@ -180,7 +180,7 @@ header a:hover::before {
 .search-bar {
     display: flex;
     width: 418px;
-    height: 49px;
+    height: 51px;
     background-color: var(--white);
     border: 1px solid var(--main-bg-color);
     border-radius: 15px;
@@ -337,9 +337,20 @@ header a:hover::before {
 }
 
 /*----------  Hébergements à Marseille  ----------*/
+.hebergements {
+    width: 65%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 .offers__main {
     height: auto;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.3rem;
 }
 
 .offers__main h2 {
@@ -347,17 +358,61 @@ header a:hover::before {
 }
 
 .card__main {
-    width: calc(100% / 3);
     border: 5px solid var(--white);
     box-shadow: 0px 3px 15px var(--box-shadows2);
     padding-bottom: 0px;
-    flex-direction: column;
-    align-items: center;
     gap: 0.25rem;
     flex: 1 0 0;
     border-radius: 1.25rem;
     background: var(--card-background);
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% / 3)- 0.9375rem);
+    box-sizing: border-box;
+
 }
+
+.card-hotel-port {
+    order: -6;
+    flex: 1 0 calc(33.33% - 0.9375rem);
+}
+
+.card-hotel-amina {
+    order: -5;
+    flex: 1 0 calc(33.33% - 0.9375rem);
+}
+
+.card-hotel-mouettes {
+    order: -4;
+    flex: 1 0 calc(33.33% - 0.9375rem);
+}
+
+.card-hotel-mer {
+    order: -3;
+    flex: 1 0 calc(33.33% - 0.9375rem);
+}
+
+.card-auberge-canibiere {
+    order: -2;
+    flex: 1 0 calc(33.33% - 0.9375rem);
+}
+
+.card-auberge-panier {
+    order: -1;
+    flex: 1 0 calc(33.33% - 0.9375rem);
+}
+
+/* .row1,
+.row2 {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1.875rem;
+}
+
+.row1 {
+    margin-bottom: 30px;
+} */
 
 .card__main a {
     color: var(--black);
@@ -388,7 +443,7 @@ header a:hover::before {
 }
 
 .card__description--main {
-    padding: 4px 0 6px 11px;
+    padding: 4px 0px 6px 6px;
 }
 
 .card__description--main>h3,
@@ -397,25 +452,14 @@ header a:hover::before {
 }
 
 .show-more__btn {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 40px;
-    margin-left: 4px;
     padding: 0;
     border: none;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: normal;
 }
 
-.row1,
-.row2 {
-    display: flex;
-    flex-direction: row;
 
-    gap: 1.875rem;
-}
-
-.row1 {
-    margin-bottom: 30px;
-}
 
 /********************************************************/
 .main-container {
@@ -464,17 +508,12 @@ header a:hover::before {
 }
 
 .hebergements-and-populaires section {
-    /*  background-color: var(--main-bg-color); */
     border-radius: 20px;
     box-sizing: border-box;
     padding: 1.875rem;
+    gap: 1.875rem;
 }
 
-/****** Hebergements ***********/
-.hebergements {
-    width: 65%;
-    background-color: var(--main-bg-color);
-}
 
 /****** Populaires ***********/
 .populaires {
@@ -584,10 +623,11 @@ header a:hover::before {
 /************Footer******************/
 footer {
     display: flex;
-    padding: 45px 0px 24px 118px;
+
     background-color: var(--main-bg-color);
     position: relative;
-    margin-bottom: -11px;
+    /*  margin-bottom: -11px;
+    padding: 45px 0px 24px 118px; */
 }
 
 footer ul {
@@ -604,8 +644,13 @@ footer ul {
     display: inline-block;
     vertical-align: top;
     width: 33.33%;
-    padding: 0 20px;
+    /*  padding: 0 20px; */
     box-sizing: border-box;
+
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9375rem;
 }
 
 .footer-column h3 {
@@ -704,16 +749,11 @@ footer ul {
         width: 100%;
     }
 
-    /*
+
     .activities-row {
-        align-items: flex-start;
-        
-        align-self: stretch;
-        width: 100%; 
-        display: flex;
         gap: 1.875rem;
-        flex-shrink: 1;
-    }*/
+    }
+
     .card__activity {
         display: flex;
         /*      
@@ -722,17 +762,20 @@ footer ul {
             flex: 1 0 0;
                 flex: 0 0 auto;
             gap: 0.625rem;
-        height: 4.375rem;*/
+        height: 4.375rem;
+        padding: 0rem;
+        */
         flex-direction: column;
         justify-content: center;
         align-items: center;
         align-self: stretch;
         justify-content: flex-end;
-        width: 19%;
+        width: 20%;
         height: auto;
         border-radius: 1.25rem;
         box-shadow: 0px 3px 15px 0px var(--box-shadows10);
-        padding: 0.9rem;
+        padding: 0rem;
+
     }
 
     .card__activity:nth-child(-n + 3) {
@@ -742,7 +785,6 @@ footer ul {
     .activities img {
         width: 100%;
         height: 12.5rem;
-        border-radius: 1.25rem 1.25rem 0rem 0rem;
         object-fit: cover;
     }
 
@@ -754,6 +796,8 @@ footer ul {
         align-items: flex-start;
         gap: 0.625rem;
         align-self: stretch;
+        padding-bottom: 1.1875rem;
+
     }
 
     footer {
@@ -838,7 +882,11 @@ footer ul {
 
     .search-bar {
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
+
+
 
     .search-bar input {
 
@@ -907,6 +955,9 @@ footer ul {
     }
 
     .hebergements {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         width: 100%;
         padding: 0;
         background-color: var(--white);
@@ -917,11 +968,11 @@ footer ul {
         font-size: 20px;
     }
 
-    .row1,
-    .row2 {
+    .offers__main {
         flex-direction: column;
         gap: 0px;
         margin: 0px;
+        gap: 1.88rem;
     }
 
     .card__main {
@@ -932,26 +983,32 @@ footer ul {
 
     .card-hotel-port {
         order: 1;
+        width: 100%;
     }
 
     .card-hotel-amina {
         order: 6;
+        width: 100%;
     }
 
     .card-hotel-mouettes {
         order: 3;
+        width: 100%;
     }
 
     .card-hotel-mer {
         order: 4;
+        width: 100%;
     }
 
     .card-auberge-canibiere {
         order: 2;
+        width: 100%;
     }
 
     .card-auberge-panier {
         order: 5;
+        width: 100%;
     }
 
 
@@ -959,17 +1016,21 @@ footer ul {
     .show-more__btn {
         margin-top: 0px;
         background-color: var(--white);
+        display: flex;
     }
 
+    .activities section {
+        display: flex;
 
-
+    }
 
     .activities {
         margin: 80px 20px 0 0px;
-        padding: 0px;
+        width: 84%;
         padding-bottom: 1.88rem;
         flex-wrap: wrap;
         align-content: center;
+        padding: 1.875rem;
     }
 
     .card__activity a {
@@ -982,6 +1043,7 @@ footer ul {
         gap: 0.94rem;
         flex-wrap: wrap;
         align-content: center;
+        width: 100%;
     }
 
     .card__activity {
@@ -989,22 +1051,21 @@ footer ul {
         padding: 0px;
     }
 
-    .offers__main {
-        gap: 1.88rem;
-    }
+
 
 
     .activities img {
         height: 8.8125rem;
     }
 
-
-    /*----------  Footer  ----------*/
-
     footer {
+        padding: 1.875rem;
         flex-direction: column;
-        padding: 0;
-        gap: 30px;
+        align-items: flex-start;
+        gap: 3.125rem;
+        align-self: stretch;
+
+
     }
 
     .footer-column:nth-child(-n + 2) {
