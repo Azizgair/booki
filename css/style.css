@@ -162,6 +162,7 @@ header a:hover::before {
     display: flex;
     align-items: center;
     border: 1px var(--main-bg-color);
+    width: 100%;
 }
 
 .search-input {
@@ -178,7 +179,7 @@ header a:hover::before {
     align-content: center;
     background-color: var(--main-bg-color);
     border-radius: 15px 0px 0px 15px;
-    height: 55px;
+    height: 51px;
     width: 54px;
 }
 
@@ -186,7 +187,7 @@ header a:hover::before {
     background-color: var(--main-color);
     color: var(--filter-bg-color);
     border: 1px solid var(--main-color);
-    padding: 17px 16px;
+    padding: 16px 16px;
     font-size: 16px;
     align-items: center;
     border-radius: 0px 15px 15px 0px;
@@ -803,6 +804,10 @@ footer ul {
 
     .headline {
         margin: 0px 20px;
+    }
+
+    .search-button {
+        padding: 17px 16px;
     }
 
     .search-button i {
