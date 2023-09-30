@@ -74,9 +74,7 @@ nav {
 
 
 
-.hebergements-nav,
-.activities-btn {
-
+.nav-menu-btn {
     height: 2.1875rem;
 }
 
@@ -778,8 +776,7 @@ footer ul {
         width: 50%;
     }
 
-    .hebergements-nav,
-    .activities-btn {
+    .nav-menu-btn {
         height: 1.1875rem;
         width: 11.71875rem;
         flex: 1 0 0;
